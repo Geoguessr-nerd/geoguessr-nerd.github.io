@@ -109,6 +109,7 @@
 
 .button:hover {
     background-color: #fff;
+    color: black;
 }
 
 .button:active {
