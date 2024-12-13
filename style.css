@@ -104,13 +104,11 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease; /* Sæt en transition på alle egenskaber */
+    transition: 0,3;
 }
 
 .button:hover {
-    background: #7f7f7f; /* Forandrer baggrundsfarven ved hover */
-    color: #fff;
-    box-shadow: 0 0 5px #7f7f7f; /* Tilføjer en skygge for at give et tryk-effekt */
+    background: #fff; /* Forandrer baggrundsfarven ved hover */
 }
 
 .button:active {
