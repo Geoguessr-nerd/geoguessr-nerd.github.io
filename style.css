@@ -91,7 +91,7 @@
     line-height: 25px;
 }
 
-button {
+.button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -104,21 +104,17 @@ button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease; /* Sæt en transition på alle egenskaber */
 }
 
-button:hover {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #7f7f7f;
-    background: transparent;
-    color: linear-gradient(rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+.button:hover {
+    background: #7f7f7f; /* Forandrer baggrundsfarven ved hover */
+    color: #fff;
+    box-shadow: 0 0 5px #7f7f7f; /* Tilføjer en skygge for at give et tryk-effekt */
+}
+
+.button:active {
+    box-shadow: 0 0 1px #7f7f7f; /* Reducerer skyggen når knappen trykkes ned */
 }
 
 h1 {
