@@ -108,7 +108,8 @@
 }
 
 .button:hover {
-    background: #fff;
+    background: #adadad;
+    opacity: 50%;
     color: black;
 }
 
