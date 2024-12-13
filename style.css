@@ -108,7 +108,7 @@
 }
 
 .button:hover {
-    background: #fff; /* Forandrer baggrundsfarven ved hover */
+    background: rgba(0, 0, 0, 0.55);
 }
 
 .button:active {
