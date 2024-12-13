@@ -108,7 +108,7 @@
 }
 
 .button:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.75));
+    background: black;
 }
 
 .button:active {
