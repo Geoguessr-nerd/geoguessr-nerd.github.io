@@ -6,31 +6,81 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .checklist-container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(tips_background.jpg);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
         }
 
-        .checklist-container h1 {
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #7f7f7f;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             text-align: center;
-            font-size: 24px;
-            color: #333;
         }
 
         .checklist {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .checklist li {
             display: flex;
             align-items: center;
             padding: 10px 0;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .checklist li:last-child {
@@ -44,41 +94,55 @@
 
         .checklist label {
             font-size: 18px;
-            color: #555;
+            color: #fff;
         }
 
         .checklist label.completed {
             text-decoration: line-through;
-            color: #999;
+            color: #ccc;
         }
     </style>
 </head>
 
 <body>
     <div class="checklist-container">
-        <h1>Tips Checklist</h1>
-        <ul class="checklist">
-            <li>
-                <input type="checkbox" id="tip1" />
-                <label for="tip1">Enable two-factor authentication on all accounts</label>
-            </li>
-            <li>
-                <input type="checkbox" id="tip2" />
-                <label for="tip2">Use a password manager to generate and store passwords</label>
-            </li>
-            <li>
-                <input type="checkbox" id="tip3" />
-                <label for="tip3">Avoid clicking on suspicious links in emails</label>
-            </li>
-            <li>
-                <input type="checkbox" id="tip4" />
-                <label for="tip4">Keep your software and antivirus up to date</label>
-            </li>
-            <li>
-                <input type="checkbox" id="tip5" />
-                <label for="tip5">Use secure Wi-Fi connections when possible</label>
-            </li>
-        </ul>
+        <div class="navbar">
+            <a href="index.html">
+                <img src="logo.png" class="logo" alt="Logo" />
+            </a>
+            <ul>
+                <li><a href="phishing.html">Phishing</a></li>
+                <li><a href="malware.html">Malware</a></li>
+                <li><a href="app-demo.html">App-Demo</a></li>
+                <li><a href="tips.html">Tips</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Tips Checklist</h1>
+            <ul class="checklist">
+                <li>
+                    <input type="checkbox" id="tip1" />
+                    <label for="tip1">Enable two-factor authentication on all accounts</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tip2" />
+                    <label for="tip2">Use a password manager to generate and store passwords</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tip3" />
+                    <label for="tip3">Avoid clicking on suspicious links in emails</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tip4" />
+                    <label for="tip4">Keep your software and antivirus up to date</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tip5" />
+                    <label for="tip5">Use secure Wi-Fi connections when possible</label>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script>
