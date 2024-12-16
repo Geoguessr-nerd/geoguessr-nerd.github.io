@@ -1,19 +1,17 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title></title>
+    <title>Image Viewer</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-
 
 <body>
     <script src="app.js"></script>
     <div class="bannerphishing">
-         <div class="navbar">
+        <div class="navbar">
             <a href="index.html">
-                <img src="logo.png" class="logo" </img>
+                <img src="logo.png" class="logo" alt="Logo" />
             </a>
             <ul>
                 <li><a href="phishing.html">Phishing</a></li>
@@ -21,17 +19,37 @@
                 <li><a href="app-demo.html">App-Demo</a></li>
                 <li><a href="#">Tips</a></li>
             </ul>
+        </div>
+
+        <div class="content">
+            <div class="image-container">
+                <img id="image-viewer" src="image1.jpg" alt="Image Viewer" />
+            </div>
+            <div class="navigation">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </div>
     </div>
 
-    <div class="content">
-</div>
-    </div>
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+        let currentIndex = 0;
 
-    </div>
-<script>
-}
-</script>
+        const imageView = document.getElementById("image-viewer");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            imageView.src = images[currentIndex];
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageView.src = images[currentIndex];
+        });
+    </script>
 </body>
-
 
 </html>
