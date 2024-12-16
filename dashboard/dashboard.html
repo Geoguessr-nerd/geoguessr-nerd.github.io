@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional: Site favicon -->
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Velkommen, <span id="user-name">User</span></h1>
+        
+        <button class="btn" onclick="showVerification()">Vis anmodninger</button>
+        
+        <div id="verification-container" style="display: none;">
+            <h3>Login Anmodninger: </h3>
+            <ul id="requests-list">
+                <li class="request" onclick="hideRequest(this)">
+                    <img src="facebook-logo.png" alt="Facebook Logo" class="service-logo">
+                    Facebook Login Andmodning
+                </li>
+                <li class="request" onclick="hideRequest(this)">
+                    <img src="snapchat-logo.png" alt="Snapchat Logo" class="service-logo">
+                    Snapchat Login Andmodning
+                </li>
+                <!-- Add more requests here -->
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
