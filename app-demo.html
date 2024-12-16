@@ -10,7 +10,7 @@
             width: 300px;
             height: 300px;
             margin: 50px auto; /* Centered horizontally and vertically adjusted */
-            overflow: hidden;
+            overflow: visible; /* Ensures the entire border is visible */
         }
 
         .image-container img {
@@ -18,7 +18,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
-            border: 2px solid #ccc;
+            border: 4px solid #ccc; /* Increased border thickness for clarity */
             position: absolute;
             opacity: 0;
             left: 0;
