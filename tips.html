@@ -120,45 +120,65 @@
         </div>
     </div>
 
-        <div class="content">
-            <h1>Tips Checklist</h1>
-            <ul class="checklist">
-                <li>
-                    <input type="checkbox" id="tip1" />
-                    <label for="tip1">Enable two-factor authentication on all accounts</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="tip2" />
-                    <label for="tip2">Use a password manager to generate and store passwords</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="tip3" />
-                    <label for="tip3">Avoid clicking on suspicious links in emails</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="tip4" />
-                    <label for="tip4">Keep your software and antivirus up to date</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="tip5" />
-                    <label for="tip5">Use secure Wi-Fi connections when possible</label>
-                </li>
-            </ul>
-        </div>
+    <div class="content">
+        <h1>Tips Tjekliste</h1>
+        <ul class="checklist">
+            <li>
+                <input type="checkbox" id="tip1" />
+                <label for="tip1">Aktiver to-faktor-autentifikation på alle konti</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip2" />
+                <label for="tip2">Brug en password manager til at oprette og gemme adgangskoder</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip3" />
+                <label for="tip3">Undgå at klikke på mistænkelige links i e-mails</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip4" />
+                <label for="tip4">Hold din software og antivirus opdateret</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip5" />
+                <label for="tip5">Brug sikre Wi-Fi-forbindelser, når det er muligt</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip6" />
+                <label for="tip6">Tjek afsenderens e-mailadresse, før du stoler på en besked</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip7" />
+                <label for="tip7">Lav regelmæssige sikkerhedskopier af vigtige filer</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip8" />
+                <label for="tip8">Brug stærke adgangskoder, som er svære at gætte</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip9" />
+                <label for="tip9">Installer kun apps fra pålidelige kilder</label>
+            </li>
+            <li>
+                <input type="checkbox" id="tip10" />
+                <label for="tip10">Deaktiver Bluetooth og GPS, når de ikke er i brug</label>
+            </li>
+        </ul>
     </div>
+</div>
 
-    <script>
-        document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function () {
-                const label = this.nextElementSibling;
-                if (this.checked) {
-                    label.classList.add('completed');
-                } else {
-                    label.classList.remove('completed');
-                }
-            });
+<script>
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            const label = this.nextElementSibling;
+            if (this.checked) {
+                label.classList.add('completed');
+            } else {
+                label.classList.remove('completed');
+            }
         });
-    </script>
+    });
+</script>
 </body>
 
 </html>
